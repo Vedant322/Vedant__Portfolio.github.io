@@ -204,7 +204,6 @@ img {
 }
 
 .nav__toggle {
-    font-size: 1.1rem;
     cursor: pointer;
 }
 
@@ -1041,6 +1040,7 @@ img {
     background: linear-gradient(to top, #008aff, #00ffe7);
     filter: blur(10px);
 }
+
 #progressBar:after {
     content: '';
     position: absolute;
