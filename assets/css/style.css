@@ -408,6 +408,68 @@ img {
     color: var(--first-color-alt);
 }
 
+.one {
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    margin: 40px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.one:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+        0 0 30px var(--clr),
+        0 0 60px var(--clr),
+        0 0 100px var(--clr);
+}
+
+.one::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: ani 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+.one:hover::before {
+    width: 120%;
+}
+
+.one::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: var(--first-color-second);
+    transition: 0.5s;
+}
+
+.one:hover::after {
+    background: var(--clr);
+}
+
+.one span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /*==================== ABOUT ====================*/
 .about__img {
     width: 200px;
