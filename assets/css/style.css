@@ -1130,6 +1130,16 @@ img {
 /* For small devices */
 
 @media screen and (max-width: 350px) {
+
+    .one {
+        padding: 20px 20px;
+    }
+
+    .one::before {
+        width: 20px;
+        height: 100%;
+    }
+
     .container {
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
